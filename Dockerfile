@@ -7,6 +7,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install pytype
+RUN pip3 install mypy
 
 WORKDIR /app
 

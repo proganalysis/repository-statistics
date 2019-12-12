@@ -1,0 +1,4 @@
+#!/bin/bash
+for f in $(find ../repos-stripped -name '*.py'); 
+    do strip-hints $f > $f.stripped && sudo chmod 777 $f.stripped && rm -f $f && mv $f.stripped $f; 
+done
