@@ -1,9 +1,0 @@
-rule infer
-  command = /usr/bin/python3 -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --no-report-errors --nofail --quick $in
-  description = infer $module
-rule check
-  command = /usr/bin/python3 -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --analyze-annotated --nofail --quick $in
-  description = check $module
-build /home/daniel/Documents/College/Semester7/Research/type-analyzer/micro-cases/.pytype/pyi/10.py-stripped.pyi: check /home/daniel/Documents/College/Semester7/Research/type-analyzer/micro-cases/10.py-stripped.py
-  imports = /home/daniel/Documents/College/Semester7/Research/type-analyzer/micro-cases/.pytype/imports/10.py-stripped.imports
-  module = 10.py-stripped

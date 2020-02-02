@@ -1,9 +1,0 @@
-rule infer
-  command = /usr/bin/python3 -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --no-report-errors --nofail --quick $in
-  description = infer $module
-rule check
-  command = /usr/bin/python3 -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --analyze-annotated --nofail --quick $in
-  description = check $module
-build /home/daniel/Documents/College/Semester7/Research/type-analyzer/hindley-milner-test/.pytype/pyi/test.pyi: check /home/daniel/Documents/College/Semester7/Research/type-analyzer/hindley-milner-test/test.py
-  imports = /home/daniel/Documents/College/Semester7/Research/type-analyzer/hindley-milner-test/.pytype/imports/test.imports
-  module = test

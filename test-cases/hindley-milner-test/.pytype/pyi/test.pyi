@@ -1,9 +1,0 @@
-# (generated with --quick)
-
-from typing import TypeVar
-
-_T0 = TypeVar('_T0')
-
-def fun(n: str) -> str: ...
-def fun1(i: _T0) -> _T0: ...
-def id(p: _T0) -> _T0: ...
