@@ -1,0 +1,6 @@
+# (generated with --quick)
+
+from typing import Any
+
+def f() -> str: ...
+def g() -> Any: ...

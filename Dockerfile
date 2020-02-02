@@ -12,5 +12,6 @@ RUN pip3 install mypy
 WORKDIR /app
 
 COPY ./sandbox /app
+COPY ./repos-test /app
 
 CMD ["sleep", "9999999"]

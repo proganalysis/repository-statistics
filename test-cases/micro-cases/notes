@@ -1,0 +1,7 @@
+- PyType will not infer types for parameters, seems it will always consider it as "Any"
+	- Due to this, if a return type is a parameter or transformed by a parameter, it will default the return type to Any
+- Merge-pyi doesn't merge the assignment annotations back for some reason? It has them inferred but won't merge them back
+
+- Strip-hints doesn't work with multi-variable definitions on the same line
+- Still working on the comparison with Nested types, but everything else works
+	- Can look at the microcases by eye
