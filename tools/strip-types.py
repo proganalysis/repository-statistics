@@ -10,7 +10,7 @@ def verify_args():
 
 def main():
     if not verify_args():
-        print("Usage: python3 ./strip-types repo-folder")
+        print("Usage: python3 ./strip-types <repo-folder>")
         sys.exit()
         
     for root, dirs, files in os.walk(sys.argv[1]):

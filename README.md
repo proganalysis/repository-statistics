@@ -8,13 +8,8 @@ This program analyzes all of the repositories within `repos` (not included due t
 
 	`typed-repos` is a list of all repositories that use atleast 1 type in their python code
 
-`repo-generator` holds a script that generated the `typed-repos` file
+`micro-data` holds statistics based on the `test-cases/micro-cases`
 
-`sandbox` is a place to put random experimental scripts for running pytype & mypy against
+`test-cases` holds a bunch of hand-written test cases for analysis
 
-`analyzer.py` is the script that will generate metrics (written to `data/stats-per-repo`)
-
-
-## Docker
-
-The docker file is used to build an environment will pytype can run in. This will copy in the `sandbox` folder to run pytype against.
+`tools` holds all of the tooling for analysis + documentation
