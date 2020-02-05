@@ -1,6 +1,7 @@
 import ast
 import glob
 import os
+import sys
 from pprint import pprint
 
 typed = set()
@@ -72,10 +73,18 @@ def scan_all_files(repo, repoName):
         elif python_2_status == False:
             not_typed.add(repoName)
 
+def verify_args():
+    if len(sys.argv) == 2:
+        if os.path.exists(sys.argv[1]):
+            return True
+    return False
+    
 def main():
-    folder = os.getcwd()
-    folder = folder[:folder.rindex("/")]
-    folder += "/repos/"
+    if not verify_args():
+        print("Usage: python3 ./repo-generator <repo-folder>")
+        sys.exit()
+        
+    folder = sys.argv[1]
     repos = get_all_repos(folder)
     for org in repos.keys():
         for repo in repos[org]:

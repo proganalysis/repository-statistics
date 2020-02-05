@@ -38,18 +38,28 @@ def scan(f, _typehints):
     a.typehints = _typehints
     a.visit(ast.parse(f.read()))
 
+def verify_args():
+    args = sys.argv
+    if len(args) == 3:
+        if os.path.isfile(args[1]) and os.path.isfile(args[2]):
+            return True
+    return False
 
 def main():
-    n = sys.argv[1]
-    count = len(open(f"../micro-cases/{n}.py").readlines(  ))
-    countGen = len(open(f"../micro-cases/{n}-gen.py").readlines(  ))
+    if not verify_args():
+        print("Usage: python3 compare.py <file1> <file2>")
+        sys.exit()
+    file1 = sys.argv[1]
+    file2 = sys.argv[2]
+    count = len(open(file1).readlines())
+    countGen = len(open(file2).readlines())
     offset = 0
     if countGen > count:
         offset = countGen - count
     handwritten = TypeHints(offset)
     generated = TypeHints(0)
-    scan(f"../micro-cases/{n}.py", handwritten)
-    scan(f"../micro-cases/{n}-gen.py", generated)
+    scan(file1, handwritten)
+    scan(file2, generated)
     functions_correct = 0
     functions_incorrect = 0
     assignments_correct = 0

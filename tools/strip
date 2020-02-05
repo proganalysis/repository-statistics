@@ -1,5 +1,0 @@
-#!/bin/bash
-for f in $(find ../micro-cases -name '*.py');
-	do echo "Stripping $f of its type hint"; 
-	strip-hints $f > $f-stripped.py
-done

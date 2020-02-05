@@ -1,7 +1,7 @@
 # Sample test from the pytype README
 from typing import Any
 
-def f() -> str       :
+def f() -> str:
      return "PyCon"
-def g() -> Any       :
+def g() -> Any:
      return f() + 2019

@@ -5,7 +5,7 @@ x: int = 5
 y: str = "s"
 
 
-def func(x     ) -> Any       :
+def func(x: int) -> Any:
     x += 1
     return x + y
 
