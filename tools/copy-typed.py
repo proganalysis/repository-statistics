@@ -12,11 +12,8 @@ def get_list_of_typed():
     return content
 
 
-def find_all_files(dir, name, new_folder):
-    cwd = os.getcwd()
-    cwd = cwd[:cwd.rindex("/")]
-    cwd = cwd + f"/{new_folder}/{name}"
-    shutil.copytree(dir, cwd)
+def copy_repo(src, dst):
+    shutil.copytree(src, dst)
 
 def verify_args():
     args = sys.argv
@@ -24,6 +21,11 @@ def verify_args():
         if os.path.exists(args[1]) and os.path.exists(args[2]):
             return True
     return False
+
+def _add_slash(s):
+    if s[len(s)-1] != "/":
+        return s + "/"
+    return s
 
 def main():
     if not verify_args():
@@ -34,8 +36,16 @@ def main():
     repo_names = get_list_of_typed()
     folder = sys.argv[1]
     new_folder = sys.argv[2]
+
+    # Change to absolute paths to avoid weird relative paths
+    folder = os.path.abspath(folder)
+    folder = _add_slash(folder)
+
+    new_folder = os.path.abspath(new_folder)
+    new_folder = _add_slash(new_folder)
+    
     for subfolder in repo_names:
-        find_all_files(folder + subfolder, subfolder, new_folder)
+        copy_repo(folder + subfolder, new_folder + subfolder)
 
 if __name__ == "__main__":
     main()

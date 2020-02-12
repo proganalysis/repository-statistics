@@ -12,11 +12,13 @@ def main():
     if not verify_args():
         print("Usage: python3 ./strip-types <repo-folder>")
         sys.exit()
-        
-    for root, dirs, files in os.walk(sys.argv[1]):
+    
+    folder = os.path.abspath(sys.argv[1])
+    for root, dirs, files in os.walk(folder):
         for file in files:
             if file.endswith(".py"): 
-                subprocess.call(["./strip", f"{os.path.join(root, file)}"])
+                file = f"{os.path.join(root, file)}"
+                subprocess.call(["./strip.sh", file])
                 
 if __name__ == "__main__":
     main()

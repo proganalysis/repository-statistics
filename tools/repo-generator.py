@@ -90,7 +90,7 @@ def main():
         for repo in repos[org]:
             repoName = org+"/"+repo
             scan_all_files(folder+repoName, repoName) 
-    f = open("../data/typed-repos-org", "w+")
+    f = open("../data/typed-repos-org-test", "w+")
     for repo in typed:
         if repo not in python_2:
             f.write(repo + "\n")
