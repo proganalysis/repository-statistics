@@ -63,8 +63,8 @@ if __name__ == "__main__":
     list_of_files = get_list_of_files("../allrepo/original")
     files_found = 0
     files_not_found = 0
-    a = Analyzer()
     for file in list_of_files:
+        a = Analyzer()
         if os.path.exists("../typed-repos-new/" + file):
             files_found += 1
             try:
