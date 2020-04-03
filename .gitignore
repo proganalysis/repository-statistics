@@ -5,8 +5,10 @@ __pycache__/
 .pytype
 
 repos/
+allrepo/
 repos-stripped
 repos-test
 test-cases/repos-test
+typed-repos-new/
 sandbox
 TODO.md

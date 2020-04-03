@@ -36,7 +36,7 @@ class Analyzer(ast.NodeVisitor):
         self.metrics.unTypedAssignments += 1
 
     def visit_AnnAssign(self, node):
-        self.metrics.typedAssignments += 2
+        self.metrics.typedAssignments += 1
 
     def getMetrics(self):
         return self.metrics
