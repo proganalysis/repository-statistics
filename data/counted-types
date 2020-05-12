@@ -1,46 +1,37 @@
 
 ------ Function return types ------
 
-Total func: 501
+Total func: 16378
 float: 11
-int: 56
+int: 51
 tuple: 14
-str: 163
+str: 152
 type: 2
-bool: 47
-InternetGateway: 1
-VPCGatewayAttachment: 1
+bool: 44
 MongoClient: 1
 Database: 3
 MatchConfig: 3
 PlayerConfig: 1
 dict: 29
 Response: 2
-bytes: 11
-Dict: 10
-List: 7
+bytes: 10
 Patch: 1
 ExecutorType: 1
 WifiMode: 1
 Cursor: 1
 TranslationUnit: 1
-list: 17
+list: 15
 Direction: 3
 ApprovedModel: 1
 Path: 5
 GraphQLSchema: 1
 ndarray: 8
 iter: 1
-Tuple: 2
+Tuple: 1
 T: 2
 BucketList: 1
 timedelta: 1
 set: 2
-QAction: 1
-MockEngine: 2
-AsyncWorkThread: 1
-Job: 2
-Callable: 3
 FakeFilePaths: 1
 VPP: 1
 bytearray: 3
@@ -48,12 +39,12 @@ Model: 3
 FileVersionResult: 2
 Web3: 2
 StatsmodelsMixedLM: 1
+Dict: 5
 Token: 5
 IntList: 1
 Decimal: 2
 IAction: 1
 ElementTree: 1
-BodyState: 1
 Member: 3
 MemberList: 1
 HttpResponse: 1
@@ -68,6 +59,7 @@ HTTPResponse: 1
 ClientRepository: 1
 SklearnRandomForestClassifier: 1
 LTS: 2
+Callable: 2
 SphericalJoint: 1
 SpringJoint: 1
 PassiveJoint: 1
@@ -89,49 +81,44 @@ QSize: 1
 AudioApi: 1
 ConfigFile: 1
 NetworkedConfigObject: 1
-SignalSender: 2
 NFA: 1
 TemplateEngine: 1
 SociBankAccount: 1
-Iterable: 1
 
 ------ Assignment types ------
 
-Total assignments: 1704
+Total assignments: 10420
 list: 45
 ObjectId: 2
-str: 628
-dict: 96
+str: 582
+dict: 94
 TaskQueue: 1
 Router: 1
-int: 260
+int: 234
 Facebook: 1
 Flask: 3
 Message: 8
-bool: 78
+bool: 72
 type: 3
 LinkAttributes: 3
-InternetGateway: 1
-VPCGatewayAttachment: 1
-Stack: 1
 GymEnv: 2
 BuildConfig: 1
 Builder: 1
 ImageConfig: 1
-Path: 29
+Path: 27
 ConfigObject: 3
 BotConfigBundle: 1
 IncrementingInteger: 1
-float: 53
+float: 52
 tuple: 13
 SessionManager: 1
 MongoClient: 1
 VariantsDb: 7
 Record: 2
 XY: 2
-Dict: 6
+Dict: 5
 CustomBot: 5
-Context: 15
+Context: 3
 RecognitionException: 1
 Token: 1
 RuleContext: 11
@@ -139,7 +126,7 @@ ZWaveNode: 2
 ZWaveValue: 2
 HttpRequest: 5
 Article: 1
-bytes: 20
+bytes: 19
 datetime: 3
 Qubit: 14
 SeedZone: 1
@@ -161,21 +148,14 @@ Project: 3
 Vocabulary: 1
 ApprovalModel: 1
 MqttSettings: 1
-Callable: 8
+Callable: 3
 GraphQLObjectType: 1
 RankedSeasons: 1
 Result: 1
 School: 2
 Client: 2
 ndarray: 9
-Utils: 1
-CurrentUser: 1
-Friends: 1
-Groups: 1
-Applications: 1
-Overlay: 1
-Screenshots: 1
-Any: 4
+Any: 3
 DiffEngine: 1
 T: 2
 BattleUnit: 3
@@ -184,14 +164,13 @@ BattleTurn: 1
 BattleOrganization: 1
 WorldUnit: 1
 Battle: 1
-List: 12
+List: 10
 RuleList: 1
 ThrottlingOptions: 1
 BucketList: 2
 MongoSession: 1
 Chat: 1
 DummyServer: 1
-Strand: 1
 Host: 1
 Dude: 2
 Space: 5
@@ -199,9 +178,6 @@ Block: 1
 DSProxyCache: 3
 DSProxyFactory: 4
 DSProxy: 4
-QApplication: 1
-QCloseEvent: 1
-QWidget: 1
 RestClient: 1
 LocalData: 1
 GooglePhotosMedia: 1
@@ -215,8 +191,6 @@ Entity: 2
 Team: 4
 bytearray: 4
 FileVersionResult: 2
-website: 1
-classification: 1
 Address: 1
 Runner: 1
 AppSession: 4
@@ -239,7 +213,6 @@ BlockExportTree: 1
 ElianCharacter: 2
 ListOfWords: 1
 pyref: 1
-BodyState: 1
 Profile: 1
 Schema: 1
 GlobalState: 1
@@ -263,7 +236,6 @@ EmailHunterClient: 6
 JsonRpcMsg: 1
 SklearnRandomForestClassifier: 2
 tibrvMsg: 1
-APSP: 1
 LTLToAutomaton: 2
 SolverInterface: 2
 QqTag: 2
@@ -281,8 +253,6 @@ TekkenGameState: 1
 Request: 1
 FaceRecognition: 1
 Queue: 2
-CustomLogger: 2
-PackageCategories: 2
 TSDBClient: 13
 ContactModel: 1
 BrainConfiguration: 1
